@@ -1,0 +1,22 @@
+import React from 'react';
+import Todo from './Todo'
+
+const TodoList = props => {
+    return (
+        <div className="todo-list">
+            {props.items.todo.map(item => (
+                <Todo 
+                key={item.id} 
+                item={item.item}
+                completed={item.completed}
+                dispatch={props.dispatch}
+                
+                />
+            ))}
+            <button className="clear-btn" onClick={() => props.dispatch({type:"CLEAR_COMPLETED"})}>
+                Clear Completed
+            </button>
+        </div>
+    )
+}
+export default TodoList;
