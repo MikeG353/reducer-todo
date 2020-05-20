@@ -1,6 +1,6 @@
 import React, { useState, useReducer } from 'react';
 
-const TodoForm = () => {
+const TodoForm = props => {
     // state to handle input
     const [newTaskName, setNewTaskName] = useState()
 
@@ -11,6 +11,7 @@ const TodoForm = () => {
     return (
         <form onSubmit={(e) => {
             e.preventDefault();
+            props.dispatch({ type: "ADD_TODO", payload: newTaskName })
         }}
         >
             <input

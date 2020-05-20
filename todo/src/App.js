@@ -11,7 +11,8 @@ const App = () => {
   return (
     <div className="App">
       <div className="TodoForm">
-        <TodoForm />
+        <TodoForm 
+        dispatch={dispatch} />
       </div>
       <div className="TodoList">
         <TodoList 
