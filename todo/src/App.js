@@ -14,7 +14,9 @@ const App = () => {
         <TodoForm />
       </div>
       <div className="TodoList">
-        <TodoList />
+        <TodoList 
+        todos={state.todos}
+        dispatch={dispatch} />
       </div>
 
     </div>

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 
 const TodoForm = () => {
     // state to handle input
-    const [newTaskName, setNewTaskName] = useState("")
+    const [newTaskName, setNewTaskName] = useState()
 
     const handleChanges = e => {
         setNewTaskName(e.target.value);
