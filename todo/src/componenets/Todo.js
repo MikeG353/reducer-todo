@@ -2,10 +2,9 @@ import React from 'react';
 
 const Todo = props => {
     return (
-        <div className={`item${props.completed ? ' completed' : ''}`}
-        onClick={event => {
-            props.dispatch({ type: "TOGGLE_COMPLETED"})
-            console.log(event)
+        <div className={`task${props.completed ? ' completed' : ''}`}
+        onClick={e => {
+            props.dispatch({ type: "TOGGLE_COMPLETED", payload: e.target.textContent})
             }}>
                 <p>{props.task}</p>
         </div>

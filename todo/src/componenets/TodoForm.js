@@ -12,6 +12,7 @@ const TodoForm = props => {
         <form onSubmit={(e) => {
             e.preventDefault();
             props.dispatch({ type: "ADD_TODO", payload: newTaskName })
+            setNewTaskName("")
         }}
         >
             <input
@@ -21,7 +22,9 @@ const TodoForm = props => {
                 value={newTaskName}
             />
             <button>Add Task</button>
+            <button onClick={() => props.dispatch({type: "CLEAR_COMPLETED"})}>Clear Completed</button>
         </form>
+        
     )
 }
 export default TodoForm

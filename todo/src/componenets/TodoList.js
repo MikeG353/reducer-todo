@@ -2,7 +2,6 @@ import React from 'react'
 import Todo from './Todo'
 
 const TodoList = props => {
-    console.log(props.todos)
     return (
         <>
             {props.todos.map(task => (
@@ -13,6 +12,7 @@ const TodoList = props => {
                 dispatch={props.dispatch}
                 />
             ))}
+           
         </>
     )
 }
